@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World.gd" type="Script" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272.564, 302.949 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 80.7261, 70.6353 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
