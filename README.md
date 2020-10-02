@@ -24,3 +24,6 @@ This repo contains some Godot projects used to learn the basics of the platform
   - [link](https://www.youtube.com/watch?v=HycyFNQfqI0) to the tutorial
   - Use W,A,S,D to move, left mouse button to shoot
   - Between 3 and 15 enemies are randomly generated every 5 seconds
+- Walker Level Generation
+  - [link](https://www.youtube.com/watch?v=2nk6bJBTtlA) to the tutorial
+  - Use Space to generate new level (ref World.gd L21-L23)
