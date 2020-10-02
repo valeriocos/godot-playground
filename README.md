@@ -20,6 +20,7 @@ This repo contains some Godot projects used to learn the basics of the platform
   - Use the arrows to move, X to hit, K to roll
 - Sprites
   - [link](https://www.youtube.com/watch?v=y6Igao5Uvu8) to the tutorial
+  - [link](https://www.youtube.com/watch?v=zqOv4wyKOQw&ab_channel=TutsByKai) to the tutorial
 - Shooter 2D
   - [link](https://www.youtube.com/watch?v=HycyFNQfqI0) to the tutorial
   - Use W,A,S,D to move, left mouse button to shoot
