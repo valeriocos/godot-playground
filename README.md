@@ -22,6 +22,7 @@ This repo contains some Godot projects used to learn the basics of the platform
   - [link](https://www.youtube.com/watch?v=y6Igao5Uvu8) to the tutorial
   - [link](https://www.youtube.com/watch?v=zqOv4wyKOQw&ab_channel=TutsByKai) to the tutorial
   - [link](https://www.youtube.com/watch?v=7HItay-6ovc) to the tutorial
+  - [link](https://youtu.be/ty-RxDy9_SQ) to the tutorial
 - Shooter 2D
   - [link](https://www.youtube.com/watch?v=HycyFNQfqI0) to the tutorial
   - Use W,A,S,D to move, left mouse button to shoot
