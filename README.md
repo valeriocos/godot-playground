@@ -30,14 +30,14 @@ This repo contains some Godot projects used to learn the basics of the platform
 - Walker Level Generation
   - [link](https://www.youtube.com/watch?v=2nk6bJBTtlA) to the tutorial
   - Use Space to generate new level (ref World.gd L21-L23)
-- Isometric
+- Isometric tiles and basics movements
   - [link](https://www.youtube.com/watch?v=7HItay-6ovc) to the tutorial
   - [link](https://www.youtube.com/watch?v=QgzQu_8mq3s) to the tutorial
   - [link](https://www.youtube.com/watch?v=KvSjJ-kdGio) to the tutorial
   - tiles should be boxes at least twice wider than the height (e.g., 128 x 64)
   - https://www.kenney.nl/assets provides free isometric assets
   - Use W,A,S,D to move
- - Dungeon (Isometric)
+- Dungeon (Isometric)
   - Maps
   	- [link](https://youtu.be/jK7ebPIq1Ho) to the tutorial 1/2
   	- [link](https://youtu.be/SteMRdOYrds) to the tutorial 2/2
