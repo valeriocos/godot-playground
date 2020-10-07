@@ -1,0 +1,685 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://assets/skeleton_mage_high.png" type="Texture" id=1]
+[ext_resource path="res://Enemy.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle_E"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 112, 113, 114, 115, 114, 113 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Idle_N"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 56, 57, 58, 59, 58, 57 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle_NE"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 84, 85, 86, 87, 86, 85 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Idle_NW"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 28, 29, 30, 31, 30, 29 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Idle_S"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 168, 169, 170, 171, 170, 169 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Idle_SE"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 140, 141, 142, 143, 142, 141 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Idle_SW"
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 196, 197, 198, 199, 198, 197 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 1.8
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Melee_E"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 124, 125, 126, 127, 126, 125 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Melee_N"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 68, 69, 70, 71, 70, 69 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "Melee_NE"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 96, 97, 98, 99, 98, 97 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "Melee_NW"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42, 43, 42, 41 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Melee_S"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 180, 181, 182, 183, 182, 181 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Melee_SE"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 152, 153, 154, 155, 154, 153 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Melee_SW"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 208, 209, 210, 211, 210, 209 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Melee_W"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15, 14, 13 ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 116, 117, 118, 119, 120, 121, 122, 123 ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 60, 61, 62, 63, 64, 65, 66, 67 ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 88, 89, 90, 91, 92, 93, 94, 95 ]
+}
+
+[sub_resource type="Animation" id=19]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 32, 33, 34, 35, 36, 37, 38, 39 ]
+}
+
+[sub_resource type="Animation" id=20]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 172, 173, 174, 175, 176, 177, 178, 179 ]
+}
+
+[sub_resource type="Animation" id=21]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
+}
+
+[sub_resource type="Animation" id=22]
+length = 1.6
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 200, 201, 202, 203, 204, 205, 206, 207 ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 1.6
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "Idle_S"
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "Idle_E"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "Idle_S"
+
+[sub_resource type="AnimationNodeAnimation" id=53]
+animation = "Idle_N"
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "Idle_S"
+
+[sub_resource type="AnimationNodeAnimation" id=55]
+animation = "Idle_N"
+
+[sub_resource type="AnimationNodeAnimation" id=65]
+animation = "Idle_W"
+
+[sub_resource type="AnimationNodeAnimation" id=66]
+animation = "Idle_SW"
+
+[sub_resource type="AnimationNodeAnimation" id=67]
+animation = "Idle_SE"
+
+[sub_resource type="AnimationNodeAnimation" id=68]
+animation = "Idle_NW"
+
+[sub_resource type="AnimationNodeAnimation" id=69]
+animation = "Idle_NE"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "Idle_N"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "Idle_W"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "Idle_S"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "Idle_N"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "Idle_S"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "Idle_N"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "Idle_W"
+
+[sub_resource type="AnimationNodeAnimation" id=37]
+animation = "Idle_W"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=33]
+blend_point_0/node = SubResource( 25 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 26 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 27 )
+blend_point_2/pos = Vector2( 0, -1 )
+blend_point_3/node = SubResource( 28 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_point_4/node = SubResource( 29 )
+blend_point_4/pos = Vector2( 0, 1 )
+blend_point_5/node = SubResource( 30 )
+blend_point_5/pos = Vector2( 0, -1 )
+blend_point_6/node = SubResource( 31 )
+blend_point_6/pos = Vector2( 0, 1 )
+blend_point_7/node = SubResource( 32 )
+blend_point_7/pos = Vector2( 0, -1 )
+blend_point_8/node = SubResource( 36 )
+blend_point_8/pos = Vector2( -1, 0 )
+blend_point_9/node = SubResource( 37 )
+blend_point_9/pos = Vector2( 1, 0 )
+blend_point_10/node = SubResource( 52 )
+blend_point_10/pos = Vector2( 0, 1 )
+blend_point_11/node = SubResource( 53 )
+blend_point_11/pos = Vector2( 0, -1 )
+blend_point_12/node = SubResource( 54 )
+blend_point_12/pos = Vector2( 0, 1 )
+blend_point_13/node = SubResource( 55 )
+blend_point_13/pos = Vector2( 0, -1 )
+blend_point_14/node = SubResource( 65 )
+blend_point_14/pos = Vector2( -1, 0 )
+blend_point_15/node = SubResource( 66 )
+blend_point_15/pos = Vector2( -0.8, 0.6 )
+blend_point_16/node = SubResource( 67 )
+blend_point_16/pos = Vector2( 0.8, 0.6 )
+blend_point_17/node = SubResource( 68 )
+blend_point_17/pos = Vector2( -0.8, -0.6 )
+blend_point_18/node = SubResource( 69 )
+blend_point_18/pos = Vector2( 0.8, -0.6 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "Melee_S"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "Melee_N"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "Melee_E"
+
+[sub_resource type="AnimationNodeAnimation" id=46]
+animation = "Melee_W"
+
+[sub_resource type="AnimationNodeAnimation" id=74]
+animation = "Melee_SW"
+
+[sub_resource type="AnimationNodeAnimation" id=75]
+animation = "Melee_SE"
+
+[sub_resource type="AnimationNodeAnimation" id=76]
+animation = "Melee_NW"
+
+[sub_resource type="AnimationNodeAnimation" id=77]
+animation = "Melee_NE"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=47]
+blend_point_0/node = SubResource( 43 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 44 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 45 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 46 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_point_4/node = SubResource( 74 )
+blend_point_4/pos = Vector2( -0.8, 0.6 )
+blend_point_5/node = SubResource( 75 )
+blend_point_5/pos = Vector2( 0.8, 0.6 )
+blend_point_6/node = SubResource( 76 )
+blend_point_6/pos = Vector2( -0.8, -0.6 )
+blend_point_7/node = SubResource( 77 )
+blend_point_7/pos = Vector2( 0.8, -0.6 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=56]
+animation = "Walk_W"
+
+[sub_resource type="AnimationNodeAnimation" id=57]
+animation = "Walk_W"
+
+[sub_resource type="AnimationNodeAnimation" id=58]
+animation = "Walk_E"
+
+[sub_resource type="AnimationNodeAnimation" id=59]
+animation = "Walk_S"
+
+[sub_resource type="AnimationNodeAnimation" id=60]
+animation = "Melee_SW"
+
+[sub_resource type="AnimationNodeAnimation" id=62]
+animation = "Walk_W"
+
+[sub_resource type="AnimationNodeAnimation" id=70]
+animation = "Walk_SW"
+
+[sub_resource type="AnimationNodeAnimation" id=71]
+animation = "Walk_SE"
+
+[sub_resource type="AnimationNodeAnimation" id=72]
+animation = "Walk_NW"
+
+[sub_resource type="AnimationNodeAnimation" id=73]
+animation = "Walk_NE"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=61]
+blend_point_0/node = SubResource( 56 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 57 )
+blend_point_1/pos = Vector2( -1, 0 )
+blend_point_2/node = SubResource( 58 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 59 )
+blend_point_3/pos = Vector2( 0, 1 )
+blend_point_4/node = SubResource( 60 )
+blend_point_4/pos = Vector2( 0, -1 )
+blend_point_5/node = SubResource( 62 )
+blend_point_5/pos = Vector2( -1, 0 )
+blend_point_6/node = SubResource( 70 )
+blend_point_6/pos = Vector2( -0.8, 0.6 )
+blend_point_7/node = SubResource( 71 )
+blend_point_7/pos = Vector2( 0.8, 0.6 )
+blend_point_8/node = SubResource( 72 )
+blend_point_8/pos = Vector2( -0.8, -0.6 )
+blend_point_9/node = SubResource( 73 )
+blend_point_9/pos = Vector2( 0.8, -0.6 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachine" id=34]
+states/Idle/node = SubResource( 33 )
+states/Idle/position = Vector2( 150, 86 )
+states/Melee/node = SubResource( 47 )
+states/Melee/position = Vector2( 150, 205 )
+states/Walk/node = SubResource( 61 )
+states/Walk/position = Vector2( 359.42, 86 )
+transitions = [ "Idle", "Melee", SubResource( 50 ), "Melee", "Idle", SubResource( 51 ), "Idle", "Walk", SubResource( 63 ), "Walk", "Idle", SubResource( 64 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -331.58, -53.1099 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 2.66968, 4.03389 )
+polygon = PoolVector2Array( -33.7118, 2.56869, -19.696, 9.91031, -0.340836, 11.2452, 21.0166, 9.5766, 32.029, 1.23385, 22.6851, -8.77745, -0.340836, -11.7808, -24.368, -9.44487 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -43 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+vframes = 8
+hframes = 28
+frame = 28
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle_E = SubResource( 1 )
+anims/Idle_N = SubResource( 2 )
+anims/Idle_NE = SubResource( 3 )
+anims/Idle_NW = SubResource( 4 )
+anims/Idle_S = SubResource( 5 )
+anims/Idle_SE = SubResource( 6 )
+anims/Idle_SW = SubResource( 7 )
+anims/Idle_W = SubResource( 8 )
+anims/Melee_E = SubResource( 9 )
+anims/Melee_N = SubResource( 10 )
+anims/Melee_NE = SubResource( 11 )
+anims/Melee_NW = SubResource( 12 )
+anims/Melee_S = SubResource( 13 )
+anims/Melee_SE = SubResource( 14 )
+anims/Melee_SW = SubResource( 24 )
+anims/Melee_W = SubResource( 15 )
+anims/Walk_E = SubResource( 16 )
+anims/Walk_N = SubResource( 17 )
+anims/Walk_NE = SubResource( 18 )
+anims/Walk_NW = SubResource( 19 )
+anims/Walk_S = SubResource( 20 )
+anims/Walk_SE = SubResource( 21 )
+anims/Walk_SW = SubResource( 22 )
+anims/Walk_W = SubResource( 23 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 34 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 35 )
+parameters/Idle/blend_position = Vector2( -0.603873, -0.310345 )
+parameters/Melee/blend_position = Vector2( 0, 0 )
+parameters/Walk/blend_position = Vector2( 0.0017606, 0.62069 )

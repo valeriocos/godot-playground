@@ -37,7 +37,17 @@ This repo contains some Godot projects used to learn the basics of the platform
   - tiles should be boxes at least twice wider than the height (e.g., 128 x 64)
   - https://www.kenney.nl/assets provides free isometric assets
   - Use W,A,S,D to move
- - Dungeon
-  - [link](https://youtu.be/jK7ebPIq1Ho) to the tutorial 1/2
-  - [link](https://youtu.be/SteMRdOYrds) to the tutorial 2/2
-  - Use W,A,S,D to move
+ - Dungeon (Isometric)
+  - Maps
+  	- [link](https://youtu.be/jK7ebPIq1Ho) to the tutorial 1/2
+  	- [link](https://youtu.be/SteMRdOYrds) to the tutorial 2/2
+  	- Use W,A,S,D to move
+  - Isometric animations and movements
+    - Animations
+    	- [link](https://youtu.be/Y744H67BfbQ) to the tutorial
+    - Movements
+    	- W, A, S, D: [link](https://youtu.be/SUZpVd18IMM) to the tutorial
+    	- Mouse: [link](https://youtu.be/05OixHPbxNA) to the tutorial
+    - Animation Tree
+    	- [link](https://youtu.be/KAZX4qfD06E) to the tutorial
+    	- Use Mouse Left button to walk and right button to attack
