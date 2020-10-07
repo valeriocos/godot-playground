@@ -1,0 +1,131 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wall_N.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall_W.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Library.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Barrells.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player.gd" type="Script" id=7]
+
+[node name="World" type="Node2D"]
+position = Vector2( 174, 372 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Floor" type="YSort" parent="YSort"]
+
+[node name="Floor" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 376, -448 )
+
+[node name="Floor17" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( -136, -192 )
+
+[node name="Floor18" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 248, 0 )
+
+[node name="Floor19" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 120, -64 )
+
+[node name="Floor20" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( -8, -128 )
+
+[node name="Floor2" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 248, -384 )
+
+[node name="Floor3" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 120, -320 )
+
+[node name="Floor4" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( -8, -256 )
+
+[node name="Floor5" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 760, -256 )
+
+[node name="Floor6" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 632, -192 )
+
+[node name="Floor7" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 504, -128 )
+
+[node name="Floor21" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 504, -128 )
+
+[node name="Floor8" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 376, -63.2693 )
+
+[node name="Floor22" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 503.786, -0.566956 )
+
+[node name="Floor23" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 375.206, 63.7228 )
+
+[node name="Floor24" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 630.97, -64.6393 )
+
+[node name="Floor25" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 759.404, -128.716 )
+
+[node name="Floor26" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 886.639, -192.403 )
+
+[node name="Floor9" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 632, -320 )
+
+[node name="Floor10" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 504, -256 )
+
+[node name="Floor11" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 376, -192 )
+
+[node name="Floor12" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 248, -128 )
+
+[node name="Floor13" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 504, -384 )
+
+[node name="Floor14" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 376, -320 )
+
+[node name="Floor15" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 248, -256 )
+
+[node name="Floor16" parent="YSort/Floor" instance=ExtResource( 1 )]
+position = Vector2( 120, -192 )
+
+[node name="Walls" type="YSort" parent="YSort"]
+position = Vector2( 80, 40 )
+
+[node name="Wall_W" parent="YSort/Walls" instance=ExtResource( 3 )]
+position = Vector2( 170, -200 )
+
+[node name="Wall_W2" parent="YSort/Walls" instance=ExtResource( 3 )]
+position = Vector2( 50, -140 )
+
+[node name="Wall_N" parent="YSort/Walls" instance=ExtResource( 2 )]
+position = Vector2( 370, -240 )
+
+[node name="Wall_N2" parent="YSort/Walls" instance=ExtResource( 2 )]
+position = Vector2( 490, -180 )
+
+[node name="Wall_N3" parent="YSort/Walls" instance=ExtResource( 2 )]
+position = Vector2( 610, -120 )
+
+[node name="Stuffs" type="YSort" parent="YSort"]
+
+[node name="Library" parent="YSort/Stuffs" groups=[
+"Libraries",
+] instance=ExtResource( 5 )]
+position = Vector2( 406, -42 )
+
+[node name="Library2" parent="YSort/Stuffs" groups=[
+"Libraries",
+] instance=ExtResource( 5 )]
+position = Vector2( 440.99, 116.75 )
+
+[node name="Barrells" parent="YSort/Stuffs" instance=ExtResource( 6 )]
+position = Vector2( 156, -82 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 236, 118 )
+script = ExtResource( 7 )

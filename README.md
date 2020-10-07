@@ -37,3 +37,7 @@ This repo contains some Godot projects used to learn the basics of the platform
   - tiles should be boxes at least twice wider than the height (e.g., 128 x 64)
   - https://www.kenney.nl/assets provides free isometric assets
   - Use W,A,S,D to move
+ - Dungeon
+  - [link](https://youtu.be/jK7ebPIq1Ho) to the tutorial 1/2
+  - [link](https://youtu.be/SteMRdOYrds) to the tutorial 2/2
+  - Use W,A,S,D to move
