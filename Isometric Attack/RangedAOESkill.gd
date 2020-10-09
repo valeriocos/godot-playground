@@ -4,12 +4,13 @@ onready var animation_player = $AnimationPlayer
 
 var skill_name
 var fire_direction
-var damage = 180
+var damage
 var animation = "explosion"
 var damage_delay_time = 0.3
 var remove_delay_time = 1.1
 
 func _ready():
+	damage = DataImport.attack_data[skill_name].damage
 	AOEAttack()
 	
 func AOEAttack():

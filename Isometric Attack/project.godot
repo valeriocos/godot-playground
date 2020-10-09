@@ -19,6 +19,10 @@ config/name="Isometric Attack"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+DataImport="*res://data/DataImport.gd"
+
 [input]
 
 LMB={

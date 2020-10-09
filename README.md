@@ -61,3 +61,5 @@ This repo contains some Godot projects used to learn the basics of the platform
    		- [link](https://youtu.be/h5slNt__Tt8) to the tutorial
    	- Switching attack mode
    		- [link](https://youtu.be/58PHsZI_KOo) to the tutorial
+   	- Manage attack modes data via a database
+   		- [link](https://youtu.be/Pc0mooBdhy8) to the tutorial

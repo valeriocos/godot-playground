@@ -6,9 +6,10 @@ var skill_name
 var fire_direction
 var projectile_speed = 400
 var life_time = 3
-var damage = 90
+var damage
 
 func _ready():
+	damage = DataImport.attack_data[skill_name].damage
 	var direction = Vector2(projectile_speed, 0).rotated(rotation)
 	apply_impulse(Vector2(), direction)
 	animation.play("Fire")

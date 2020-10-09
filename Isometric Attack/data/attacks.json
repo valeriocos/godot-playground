@@ -1,0 +1,12 @@
+{
+	"Bomb": {
+		"name": "Bomb",
+		"type": "RangedAOESkill",
+		"damage": 180
+	},
+	"Thunder": {
+		"name": "Thunder",
+		"type": "RangedSingleTargetSkill",
+		"damage": 90
+	}
+}
