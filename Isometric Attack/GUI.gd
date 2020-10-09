@@ -6,7 +6,8 @@ var default_skill = "Shortcut2"
 var loaded_skills = {
 	"Shortcut1": "Bomb",
 	"Shortcut2": "Thunder",
-	"Shortcut3": "Shockwave"
+	"Shortcut3": "Shockwave",
+	"Shortcut4": "Heal"
 }
 
 func _ready():

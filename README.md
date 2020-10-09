@@ -65,3 +65,5 @@ This repo contains some Godot projects used to learn the basics of the platform
    		- [link](https://youtu.be/Pc0mooBdhy8) to the tutorial
     - Modeling shockwave attack
     	- [link](https://youtu.be/PLgTuUzOxYM) to the tutorial
+    - Healing skill
+    	- [link](https://youtu.be/X0Fx6YN7c4k) to the tutorial

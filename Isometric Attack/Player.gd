@@ -3,6 +3,9 @@ extends KinematicBody2D
 onready var animation_tree = get_node("AnimationTree")
 onready var animation_mode = animation_tree.get("parameters/playback")
 
+var max_hp = 500
+var current_hp
+
 var max_speed = 400
 var speed = 0
 var accelaration = 1200
@@ -17,6 +20,9 @@ var shooting = false
 var fire_direction
 
 var selected_skill
+
+func _ready():
+	current_hp = max_hp
 
 func _unhandled_input(event):
 	if event.is_action_pressed("LMB"):
@@ -65,6 +71,11 @@ func SkillLoop():
 				skill_instance.position = get_global_position()
 				
 				get_parent().add_child(skill_instance)
+			"SingleTargetHeal":
+				var skill = load("res://SingleTargetHeal.tscn")
+				var skill_instance = skill.instance()
+				skill_instance.skill_name = selected_skill
+				add_child(skill_instance)
 		
 		yield(get_tree().create_timer(rate_of_fire), "timeout")
 		can_fire = true
@@ -98,3 +109,8 @@ func Attack():
 	animation_mode.travel("Melee")
 	yield(get_tree().create_timer(0.4), "timeout")
 	attacking = false
+	
+func OnHeal(heal_amount):
+	current_hp += heal_amount
+	if current_hp > max_hp:
+		current_hp = max_hp

@@ -13,5 +13,10 @@
 		"name": "Shockwave",
 		"type": "ExpandingAOESkill",
 		"damage": 120
+	},
+	"Heal": {
+		"name": "Heal",
+		"type": "SingleTargetHeal",
+		"heal": 500
 	}
 }
