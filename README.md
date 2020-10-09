@@ -42,12 +42,22 @@ This repo contains some Godot projects used to learn the basics of the platform
   	- [link](https://youtu.be/jK7ebPIq1Ho) to the tutorial 1/2
   	- [link](https://youtu.be/SteMRdOYrds) to the tutorial 2/2
   	- Use W,A,S,D to move
-  - Isometric animations and movements
-    - Animations
-    	- [link](https://youtu.be/Y744H67BfbQ) to the tutorial
-    - Movements
-    	- W, A, S, D: [link](https://youtu.be/SUZpVd18IMM) to the tutorial
-    	- Mouse: [link](https://youtu.be/05OixHPbxNA) to the tutorial
-    - Animation Tree
-    	- [link](https://youtu.be/KAZX4qfD06E) to the tutorial
-    	- Use Mouse Left button to walk and right button to attack
+- Isometric animations and movements
+	- Animations
+		- [link](https://youtu.be/Y744H67BfbQ) to the tutorial
+	- Movements
+		- W, A, S, D: [link](https://youtu.be/SUZpVd18IMM) to the tutorial
+		- Mouse: [link](https://youtu.be/05OixHPbxNA) to the tutorial
+	- Animation Tree
+		- [link](https://youtu.be/KAZX4qfD06E) to the tutorial
+		- Use Mouse Left button to walk and right button to attack
+- Isometric attack
+	- Use Mouse Left button to walk, right button to melee attack and central button to throw a projectile
+   	- Shooting projectiles
+   		- [link](https://youtu.be/isA7P9ulBwE) to the tutorial
+   	- Handling hit damage
+   		- [link](https://youtu.be/hf_Ce8FdMGM) to the tutorial
+   	- Modeling health bar
+   		- [link](https://youtu.be/h5slNt__Tt8) to the tutorial
+   	- Switching attack mode
+   		- [link](https://youtu.be/58PHsZI_KOo) to the tutorial
