@@ -8,5 +8,10 @@
 		"name": "Thunder",
 		"type": "RangedSingleTargetSkill",
 		"damage": 90
+	},
+	"Shockwave": {
+		"name": "Shockwave",
+		"type": "ExpandingAOESkill",
+		"damage": 120
 	}
 }

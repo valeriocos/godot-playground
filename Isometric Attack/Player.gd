@@ -58,6 +58,13 @@ func SkillLoop():
 				skill_instance.position = get_global_mouse_position()
 				
 				get_parent().add_child(skill_instance)
+			"ExpandingAOESkill":
+				var skill = load("res://ExpandingAOESkill.tscn")
+				var skill_instance = skill.instance()
+				skill_instance.skill_name = selected_skill
+				skill_instance.position = get_global_position()
+				
+				get_parent().add_child(skill_instance)
 		
 		yield(get_tree().create_timer(rate_of_fire), "timeout")
 		can_fire = true

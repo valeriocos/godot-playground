@@ -5,7 +5,8 @@ onready var shortcuts_path = "AttackBar/Background/HBoxContainer/"
 var default_skill = "Shortcut2"
 var loaded_skills = {
 	"Shortcut1": "Bomb",
-	"Shortcut2": "Thunder"
+	"Shortcut2": "Thunder",
+	"Shortcut3": "Shockwave"
 }
 
 func _ready():
