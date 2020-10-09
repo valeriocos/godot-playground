@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var animation = $AnimationPlayer
 onready var hp_bar = $TextureProgress
 onready var hp_bar_tween = hp_bar.get_node("Tween")
+onready var player = get_parent().get_node("Player")
 
 const EnemyDeathEffect = preload("res://EnemyDeathEffect.tscn")
 
@@ -11,6 +12,9 @@ var current_hp
 var percentage_hp = 100
 var can_heal = true
 var dead = false
+
+var player_in_range
+var player_in_sight
 
 func _ready():
 	animation.play("Idle")
@@ -29,6 +33,9 @@ func _process(delta):
 			add_child(skill_instance)
 			yield(get_tree().create_timer(1.25), "timeout")
 			can_heal = true
+
+func _physics_process(delta):
+	SightCheck()
 
 func OnHit(damage):
 	current_hp -= damage
@@ -67,3 +74,28 @@ func OnDeath():
 	# In case the body of the enemy remains on the field, the HP bar should
 	# be hidden 
 	hp_bar.hide()
+
+func _on_Sight_body_entered(body):
+	if body == player:
+		player_in_range = true
+		print("player in range ", player_in_range)
+
+func _on_Sight_body_exited(body):
+	if body == player:
+		player_in_range = true
+		# print("player in range ", player_in_range)
+
+func SightCheck():
+	if player_in_range == true:
+		var space_state = get_world_2d().direct_space_state
+		var sight_check = space_state.intersect_ray(position, player.position, [self], collision_mask)
+		if sight_check:
+			if sight_check.collider.name == "Player":
+				player_in_sight = true
+				print("player in sight ", player_in_range)
+			else:
+				player_in_sight = false
+				print("player in sight ", player_in_range)
+	
+	
+	
